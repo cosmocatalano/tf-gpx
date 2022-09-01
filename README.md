@@ -19,5 +19,5 @@ This software converts the [polyline](https://developers.google.com/maps/documen
 Polylines are a great way to deliver visual info in an extremely compact package, but they are not particularly data-rich. As an example, [this multi-hour Mountain Bike loop](https://www.trailforks.com/route/flash-of-gold-to-grouse/map/) contains about 1440 individual points when exported from a polyline using this software. My own [GPS recording of a nearly indentical route](https://www.strava.com/activities/1645643527) has more than 13,000.
 
 ## Logged-in Users
-When logged-in as a Trailforks user, some pages that would normally display an interactve map will display a static image instead. You'll need to go to the specific Map page for a given trail/route to export. This software attempts to catch this gotcha redirect you there via popup.
+When logged-in as a Trailforks user, some pages that would normally display an interactve map will display a static image instead. You'll need to go to the specific Map page for a given trail/route to export. This software attempts to catch this gotcha and redirect you there via popup.
 
