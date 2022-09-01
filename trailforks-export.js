@@ -65,7 +65,7 @@ if ( errCheck(pageString) ) {
 	}
 
 	//start the GPX file string
-	let gpxHead = '<?xml version="1.0" encoding="UTF-8"?>\n<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" creator="https://cosmocatalano.com">';
+	let gpxHead = '<?xml version="1.0" encoding="UTF-8"?>\n<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" creator="https://github.com/cosmocatalano/tf-gpx">';
 	//add some metadata
 	let gpxMeta ='\n\t<metadata>\n\t\t<link href="' + pageUrl + '">\n\t\t\t<text>' + pageTitle + '</text>\n\t\t</link>\n\t</metadata>\n\t<trk>\n\t\t<name>' + shortTitle + '</name>\n\t\t<trkseg>';
 	//close tags
