@@ -50,12 +50,13 @@ if ( errCheck(pageString) ) {
 
 	//find polyline
 	//polyline value lives in an HTML <script> and has escaped backslashes that skew the results of the Mapbox decoder
-	//replacing with the encoded '5C%' to avoid JS backslash drama altogether
-	let trailPolyline = pageString.match(/encodedpath:\s?'(.*?)'/)[1].replaceAll('\\\\', '%5C');
+	//replacing with the encoded 'HCX' to avoid JS backslash drama altogether
+	//not sure how/why this works but it's how their own encoder handles backslashes https://developers.google.com/maps/documentation/utilities/polylineutility
+	let trailPolyline = pageString.match(/encodedpath:\s?'(.*?)'/)[1].replaceAll('\\\\', 'HCX');
 
 	//get waypoints
 	let waypointArray = polyline.decode(trailPolyline);
-
+	
 	//empty string for trackpoints
 	let gpxTrackpoints = '';
 
