@@ -80,6 +80,3 @@ if ( errCheck(pageString) ) {
 
 	downloadString(filename, text);
 }
-
-
-
