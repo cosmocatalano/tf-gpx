@@ -10,17 +10,17 @@ function downloadString(filename, text) {
 }
 
 //checks for problems, alerts user
-function errCheck(pageString) {
+function errCheck(pageStr) {
 	let noTF = "It looks like you're not on a Trailforks.com page.";
 	let noTrailRoute = "It looks like you're on Trailforks.com, but not looking at a route or trail page.";
 	let noMap = "Can't find a map on this Trailforks page. Press OK to go to the page where we think the map lives.\n\nYou'll need to click the bookmarklet again after that page loads to export."
 	if (window.location.hostname.indexOf('trailforks') === -1) {
 		window.alert(noTF)
 		return false;
-	} else if ( window.location.pathname.indexOf('trails') === -1 && window.location.pathname.indexOf('route') === -1) {
+	} else if (window.location.pathname.indexOf('trails') === -1 && window.location.pathname.indexOf('route') === -1 && window.location.pathname.indexOf('ridelog/view') === -1) {
 		window.alert(noTrailRoute);
 		return false;
-	} else if (pageString.indexOf("encodedpath") === -1) {
+	} else if (pageStr.indexOf("encodedpath") === -1) {
 		if(confirm(noMap)) {
 			window.location.href = 'https://' + document.location.hostname + document.location.pathname + 'map/'
 			return false;
