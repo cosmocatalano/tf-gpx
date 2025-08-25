@@ -1,0 +1,13 @@
+{
+  "name": "tf-gpx",
+  "version": "1.0.0",
+  "description": "Trailforks GPX Export Bookmarklet",
+  "scripts": {
+    "build": "node build-bookmarklet.js",
+    "precommit": "npm run build && git add trailforks-export.bookmarklet"
+  },
+  "devDependencies": {
+    "terser": "^5.0.0"
+  },
+  "private": true
+}
